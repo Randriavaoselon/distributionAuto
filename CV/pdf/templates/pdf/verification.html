@@ -1,0 +1,41 @@
+{% extends "pdf/base.html" %}
+
+{% block content %}
+<h1>Vérifiez que vos données sont corrects</h1>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <h2 class="text-white">{{ name }}</h1>
+</nav>
+
+<h4 class="title">CONTACT</h4>
+<p>{{ email }} <br> {{ phone }}  <br> {{ address}}</p>
+
+<h4 class="title">COMPETENCE</h4>
+<p>{{ competance }}</p>
+
+<h4 class="title">LANGUE</h4>
+<p>{{ langue }}</p>
+
+<h4 class="title">INTERETS</h4>
+<p>{{ interet }}</p>
+
+<h4 class="title">OBJECTIFS</h4>
+<p>{{ objectif }}</p>
+
+<h4 class="title">EXPERIENCE</h4>
+<p>{{ experience }}</p>
+
+<h4 class="title">EDUCATIONS</h4>
+<p>{{ education }}</p>
+
+<h4 class="title">PROJETS</h4>
+<p>{{ projet }}</p>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <small class="text-white">SelonCV generator {% now "Y-m-d " %}</small>
+</nav>
+
+<br>
+
+<a href="{% url 'finisse' %}" class="btn btn-primary text-white">Envoyer</a>
+{% endblock %}

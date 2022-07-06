@@ -1,0 +1,37 @@
+{% extends 'pdf/base.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <form action="" method="POST" class="contact-form">
+           {% csrf_token %}
+            
+           <div class="form-control">
+               <div class="tag">Nom et Prenom</div>
+               <input type="text" name="full-name">
+           </div>
+           
+       <div class="form-control">
+            <div class="tag">Email</div>
+            <input type="email" name="email">
+        </div>
+
+        <div class="form-control">
+            <div class="tag">Sujet</div>
+            <input type="text" name="subject">
+        </div>
+
+        <div class="form-control">
+            <div class="tag">Message</div>
+            <textarea  name="message" cols="30" rows="10"></textarea>
+        </div>
+
+        <div class="form-control">
+            <input type="submit" class="btn submit-btn ">
+
+        </div>
+
+        </form>
+    </div>
+
+{% endblock %}
